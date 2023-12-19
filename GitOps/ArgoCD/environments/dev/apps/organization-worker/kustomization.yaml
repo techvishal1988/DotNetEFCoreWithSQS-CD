@@ -6,4 +6,4 @@ resources:
 - ../../../../base/apps/organization-worker/
 images:
 - name: 485229547579.dkr.ecr.us-east-2.amazonaws.com/organization-worker
-  newTag: c14449be62936eaa65c98fc7ffd935b7d9c984a5
+  newTag: 5021ac1ef9182b664372781f726006c293a27716
