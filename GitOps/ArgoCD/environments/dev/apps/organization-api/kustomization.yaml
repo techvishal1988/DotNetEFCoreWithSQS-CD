@@ -6,4 +6,4 @@ resources:
 - ../../../../base/apps/organization-api/
 images:
 - name: 485229547579.dkr.ecr.us-east-2.amazonaws.com/organization-api
-  newTag: c207645ba59fb350b3586cafcbff628e037dc5ef
+  newTag: bbaea7d027acb1949823e9d02b4973a829871116
