@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/vinaylunawat/DotNetEFCoreWithSQS-CD.git
+    repoURL: https://github.com/techvishal1988/DotNetEFCoreWithSQS-CD.git
     targetRevision: HEAD
     path: GitOps/ArgoCD/environments/dev/apps/organization-api/
   destination: 
