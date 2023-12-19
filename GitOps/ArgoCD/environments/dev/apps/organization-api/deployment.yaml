@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: organization-api
+spec:
+  replicas: 2
+  revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      app: organization-api
+  template:
+    metadata:
+      labels:
+        app: organization-api
+    spec:
+      containers:
+      - image: 751111534101.dkr.ecr.us-west-2.amazonaws.com/dotnetefcorewithsqs-api:9013b3e53cba495a088f48b3fb06bd5e954217c6
+        name: organization-api
+        ports:
+        - containerPort: 80
