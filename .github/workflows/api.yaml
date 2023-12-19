@@ -37,7 +37,7 @@ jobs:
         echo $ENV_NAME
         pwd
         ls
-        cd /home/runner/work/dot-net-CD/dot-net-CD/GitOps/ArgoCD/environments/$ENV_NAME/apps/$APP_REPO/
+        cd /home/runner/work/DotNetEFCoreWithSQS-CD/DotNetEFCoreWithSQS-CD/GitOps/ArgoCD/environments/$ENV_NAME/apps/$APP_REPO/
         kustomize edit set image $IMAGE_ID:$IMAGE_TAG
     - name: Commiting deployment file changes
     
