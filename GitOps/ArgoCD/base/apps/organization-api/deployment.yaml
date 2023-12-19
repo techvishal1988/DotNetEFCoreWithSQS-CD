@@ -16,5 +16,41 @@ spec:
       containers:
       - image: 485229547579.dkr.ecr.us-east-2.amazonaws.com/organization-api:c207645ba59fb350b3586cafcbff628e037dc5ef
         name: organization-api
+        env:
+          - name: Application__ConnectionString
+            valueFrom:
+              secretKeyRef:
+                name: organizationsecret-api
+                key: databaseconnectionstring
+          - name: Application__ReadOnlyConnectionString
+            valueFrom:
+              secretKeyRef:
+                name: organizationsecret-api
+                key: ReadOnlyConnectionString
+          - name: Application__AmazonSQSConfigurationOptions__accessKey
+            valueFrom:
+              secretKeyRef:
+                name: organizationsecret-api
+                key: SQSAccessKey
+          - name: Application__AmazonSQSConfigurationOptions__secretKey
+            valueFrom:
+              secretKeyRef:
+                name: organizationsecret-api
+                key: SQSSecretKey
+          - name: Application__AmazonSQSConfigurationOptions__sqsQueueUrl
+            valueFrom:
+              secretKeyRef:
+                name: organizationsecret-api
+                key: SQSQueueUrl
+          - name: Application__AmazonS3ConfigurationOptions__accessKey
+            valueFrom:
+              secretKeyRef:
+                name: organizationsecret-api
+                key: S3AccessKey
+          - name: Application__AmazonS3ConfigurationOptions__secretKey
+            valueFrom:
+              secretKeyRef:
+                name: organizationsecret-api
+                key: S3secretKey
         ports:
         - containerPort: 80
