@@ -14,7 +14,7 @@ spec:
         app: organization-api
     spec:
       containers:
-      - image: 751111534101.dkr.ecr.us-west-2.amazonaws.com/dotnetefcorewithsqs-api:9013b3e53cba495a088f48b3fb06bd5e954217c6
+      - image: 485229547579.dkr.ecr.us-east-2.amazonaws.com/organization-api:c207645ba59fb350b3586cafcbff628e037dc5ef
         name: organization-api
         ports:
         - containerPort: 80
